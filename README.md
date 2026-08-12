@@ -4,7 +4,7 @@ WEDE5020
 ## Project Overview
 Nkosi's (NK) Family Funeral Cover "Your assurance is our concern" 
 
-###Website Goal and Objectives
+#Website Goal and Objectives
 
 ##Sitemap
 -Home
