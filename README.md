@@ -13,7 +13,7 @@ Nkosi's (NK) Family Funeral Cover "Your assurance is our concern"
 -About
 -
 
-## Changelog
+### Changelog
 added Logo, navigation, website content
 
-##Referencing
+#### Referencing
