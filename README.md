@@ -73,5 +73,7 @@ Added
 - Sitemap documentation.
   
 ## Referencing
--HOSTRSA (2026 How much is it to host a website? {online] Available at:
-https//hostafrica.co.za/blog/hosting/how-much-is-it-to-host-a-website/
+- https://www.youtube.com/watch?v=2vH9JgvRd2c
+- https://www.scribbr.co.uk/referencing/harvard-website-reference/
+- https://libguides.scu.edu.au/harvard/websites
+- https://owlmedia.co.za/(Accessed:6August2026)
