@@ -15,10 +15,6 @@ sells fresh produce, an in-store bakery range, groceries and pantry
 staples, and household essentials. Until now, LSG Supermarket's only
 online presence has been a Facebook page used to post weekly specials.  
 
-Mission: To provide affordable, quality groceries with friendly, convenient service. Vision: To become the community's trusted first choice for everyday shopping. 
-
-Target audience: Local households, working professionals, and elderly residents within a 10km radius who value convenience, freshness, and value for money.
-
 ## Website Goals and Objectives
 - Establish a professional online presence that builds customer trust.
 - Promote weekly specials and in-store promotions to a wider audience.
