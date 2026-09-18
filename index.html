@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSG Supermarket | Fresh, Affordable Groceries in Pretoria</title>
+  <meta name="description" content="LSG Supermarket is a family-run neighbourhood grocer in Pretoria, offering fresh produce, groceries, a bakery and household goods."/>
+  <link rel="stylesheet" href="css_assets/style.css">
 </head>
 <body>
-    <h1>Lesego (LSG) Supermarket</h1>
+  <img src="_images/LSG (6).png" alt="Lesego Supermarket Logo">
+  <h1>Welcome to LSG Supermarket</h1>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LSG <span>Supermarket</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow-tag">Pretoria's neighbourhood grocer since 2015</p>
+        <h1>Fresh groceries, honest prices, friendly faces.</h1>
+        <p class="lede">
+          LSG Supermarket stocks everything your household needs for the week
+           from fresh produce and a warm bakery to pantry staples and
+          household essentials  across two Pretoria branches.
+        </p>
+        <div class="cta-row">
+          <a href="products.html" class="btn btn-primary">Browse Our Departments</a>
+          <a href="contact.html" class="btn btn-outline">Find a Branch</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="_images/photo-1670684684445-a4504dca0bbc.avif"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          alt="Well-stocked grocery aisle inside LSG Supermarket"
+          width="900" height="420" loading="eager"
+        />
+        <div class="price-tag">This Week<small>Fresh specials in-store</small></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>What we stock</h2>
+          <p>Four departments under one roof, arranged so your weekly shop is quick and easy.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <img
+              src="_images/veg.avif"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="Fresh vegetable stand with leafy greens and produce"
+              width="500" height="170" loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Fresh Produce</h3>
+              <p>Daily deliveries of fruit and vegetables sourced from local suppliers.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="_images/baked.avif"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="Freshly baked bread on display in the bakery"
+              width="500" height="170" loading="lazy"
+            />
+            <div class="card-body">
+              <h3>In-Store Bakery</h3>
+              <p>Bread, rolls and pastries baked fresh every morning.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="_images/photo-1655522060985-6769176edff7.avif"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              alt="Shelves stocked with household and pantry items"
+              width="500" height="170" loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Household & Pantry</h3>
+              <p>Cleaning supplies, toiletries and everyday pantry staples.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2" style="align-items: center;">
+        <div>
+          <p class="eyebrow-tag">Weekly Specials</p>
+          <h2>New promotions every Monday, in branch and posted to Facebook.</h2>
+          <p>
+            Keep an eye on our noticeboards and social media for markdowns on
+            fresh produce and pantry favourites a small way we say thank
+            you to the neighbourhood that's shopped with us since 2015.
+          </p>
+          <a href="enquiry.html" class="btn btn-primary" style="margin-top: 1rem;">Ask About This Week's Specials</a>
+        </div>
+        <img
+          src="_images/photo-1583258292688-d0213dc5a3a8.avif"
+          sizes="(max-width: 768px) 100vw, 45vw"
+          alt="Shelves of fresh oranges, apples, lemons and limes"
+          style="border-radius: 6px; height: 300px; object-fit: cover; width: 100%;"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>LSG Supermarket</h4>
+        <p>Family-run since 2015. Two branches serving Pretoria with fresh groceries and friendly service.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>Hatfield Branch &amp; Sunnyside Branch, Pretoria</p>
+        <p>nfo@LSGSupermarket.co.za</a><br></p>
+        <p>Mon - Sat: 07:00 - 19:00 · Sun: 08:00 - 15:00</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; 2026 LSG Supermarket. All rights reserved.
+    </div>
+  </footer>
+
 </body>
 </html>
