@@ -6,6 +6,8 @@
   <title>Products | LSG Supermarket</title>
   <meta name="description" content="Browse LSG Supermarket's departments: fresh produce, bakery, groceries and pantry, and household essentials."/>
   <link rel="stylesheet" href="css_assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -52,7 +54,7 @@
         </div>
 
         <div class="grid grid-4">
-          <article class="card">
+          <article class="card reveal">
             <img
               src="_images/veg.avif"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -65,7 +67,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <img
               src="_images/baked.avif"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -78,7 +80,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <img
               src="_images/cirel.avif"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -91,7 +93,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <img
               src="_images/trolli.avif"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -107,7 +109,44 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="catalogue">
+      <div class="container">
+        <div class="section-head">
+          <h2>Shop the range</h2>
+          <p>Search, filter by department and sort by price. Select "View details" on any product to check stock at each branch.</p>
+        </div>
+
+        <div class="catalogue-tools">
+          <div class="form-row">
+            <label for="product-search">Search products</label>
+            <input type="search" id="product-search" placeholder="e.g. milk, bread, rice" autocomplete="off" />
+          </div>
+          <div class="form-row">
+            <label for="product-sort">Sort by</label>
+            <select id="product-sort">
+              <option value="name">Name (A to Z)</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+            </select>
+          </div>
+          <label class="checkbox-row"><input type="checkbox" id="in-stock-only" /> In stock only</label>
+        </div>
+
+        <div class="tab-list" role="tablist" aria-label="Filter by department">
+          <button type="button" role="tab" aria-selected="true" tabindex="0" data-dept="all">All</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-dept="produce">Fresh Produce</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-dept="bakery">Bakery</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-dept="pantry">Groceries &amp; Pantry</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-dept="household">Household</button>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="grid grid-4" id="product-grid"></div>
+        <noscript><p>Please enable JavaScript to browse the full product list.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container grid grid-2" style="align-items: center;">
         <div>
           <p class="eyebrow-tag">Bulk &amp; Supplier Orders</p>
@@ -146,7 +185,7 @@
       <div>
         <h4>Visit Us</h4>
         <p>Hatfield Branch &amp; Sunnyside Branch, Pretoria</p>
-        <p>nfo@LSGSupermarket.co.za</a><br></p>
+        <p><a href="mailto:info@lsgsupermarket.co.za">info@lsgsupermarket.co.za</a></p>
         <p>Mon - Sat: 07:00 - 19:00 · Sun: 08:00 - 15:00</p>
       </div>
     </div>
@@ -154,6 +193,7 @@
       &copy; 2026 LSG Supermarket. All rights reserved.
     </div>
   </footer>
+   <script src="js_assets/forms.js"></script>
 
 </body>
 </html>

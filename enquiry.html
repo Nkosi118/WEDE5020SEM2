@@ -6,6 +6,8 @@
   <title>Enquiry | LSG Supermarket</title>
   <meta name="description" content="Send LSG Supermarket an enquiry about stock, bulk orders, supplier partnerships or careers."/>
   <link rel="stylesheet" href="css_assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="site-header">
@@ -36,14 +38,71 @@
     <div class="container">
       <p class="breadcrumb"><a href="index.html">Home</a> / Enquiry</p>
       <h1>Ask us about stock, bulk orders, or working with us.</h1>
-      <p class="lede">Assistance will be offered by</p>
+      <p class="lede">Our team replies within two working days.</p>
     </div>
   </section>
 
   <main>
     <section class="section">
       <div class="container grid grid-2" style="align-items: flex-start;">
-        <div class="form-card"> 
+
+        <!-- ============ ENQUIRY FORM ============ -->
+        <div class="form-card">
+          <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" novalidate>
+            <div class="form-row">
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" name="full-name" placeholder=" " required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder=" " required />
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder=" " />
+              <p class="form-note">Optional - only needed if you'd prefer a call back.</p>
+            </div>
+
+            <div class="form-row">
+              <label for="enquiry-type">Type of enquiry</label>
+              <select id="enquiry-type" name="enquiry-type" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="stock">Stock / product availability</option>
+                <option value="bulk-order">Bulk order</option>
+                <option value="supplier">Supplier / partnership</option>
+                <option value="careers">Careers</option>
+                <option value="general">General feedback</option>
+              </select>
+            </div>
+
+            <!-- Shown only for stock / bulk-order enquiries (forms.js toggles "hidden") -->
+            <div class="form-row" id="product-group" hidden>
+              <label for="product">Product</label>
+              <select id="product" name="product">
+                <option value="">Select a product</option>
+              </select>
+            </div>
+
+            <div class="form-row" id="quantity-group" hidden>
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" min="1" max="5000" value="1" />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          </form>
+
+          <!-- forms.js writes the thank-you / pricing response in here -->
+          <div id="enquiry-response" class="form-success" aria-live="polite"></div>
+        </div>
+
+        <!-- ============ SIDEBAR: WHAT TO EXPECT ============ -->
         <div>
           <p class="eyebrow-tag">Before You Send</p>
           <h2>What happens after you enquire</h2>
@@ -86,7 +145,7 @@
       <div>
         <h4>Visit Us</h4>
         <p>Hatfield Branch &amp; Sunnyside Branch, Pretoria</p>
-        <p>nfo@LSGSupermarket.co.za</a><br></p>
+        <p><a href="mailto:info@lsgsupermarket.co.za">info@lsgsupermarket.co.za</a></p>
         <p>Mon - Sat: 07:00 - 19:00 · Sun: 08:00 - 15:00</p>
       </div>
     </div>
@@ -94,5 +153,6 @@
       &copy; 2026 LSG Supermarket. All rights reserved.
     </div>
   </footer>
+   <script src="js_assets/forms.js"></script>
 </body>
 </html>

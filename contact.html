@@ -6,6 +6,9 @@
   <title>Contact | LSG Supermarket</title>
   <meta name="description" content="Find LSG Supermarket's two Pretoria branches, trading hours, and get in touch via our contact form."/>
   <link rel="stylesheet" href="css_assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -50,8 +53,9 @@
         </div>
 
         <div class="grid grid-2">
-          <article class="branch-card">
+          <article class="branch-card reveal">
             <h3>Hatfield Branch (opened 2015)</h3>
+            <div id="map-hatfield" class="map" role="region" aria-label="Map of the Hatfield branch"></div>
             <p>12 Lynnwood Road, Hatfield, Pretoria, 0083</p>
             <table class="hours-table">
               <tr><td>Mon - Sat</td><td>07:00 - 19:00</td></tr>
@@ -60,8 +64,9 @@
             <p style="margin-top: 0.75rem;"><strong>Tel:</strong> 012 345 6789</p>
           </article>
 
-          <article class="branch-card">
+          <article class="branch-card reveal">
             <h3>Sunnyside Branch (opened 2021)</h3>
+            <div id="map-sunnyside" class="map" role="region" aria-label="Map of the Sunnyside branch"></div>
             <p>45 Church Street, Sunnyside, Pretoria, 0132</p>
             <table class="hours-table">
               <tr><td>Mon - Sat</td><td>07:00 - 19:00</td></tr>
@@ -73,7 +78,7 @@
       </div>
     </section>
 
-
+    <!-- ============ CONTACT FORM ============ -->
     <section class="section section-alt">
       <div class="container grid grid-2" style="align-items: flex-start;">
         <div>
@@ -82,10 +87,53 @@
           <p>
             For product or bulk-order enquiries, please use our
             <a href="enquiry.html" style="color: var(--color-primary); font-weight: 600;">Enquiry page</a>
-            instead — it routes your request to the right team faster.
+            instead - it routes your request to the right team faster.
             Use the form here for anything else: general feedback,
             complaints, or questions about a specific branch.
           </p>
+        </div>
+
+        <div class="form-card">
+          <form id="contact-form" action="mailto:info@lsgsupermarket.co.za" method="post" enctype="text/plain" novalidate>
+            <div class="form-row">
+              <label for="c-name">Full name</label>
+              <input type="text" id="c-name" name="c-name" placeholder=" " required />
+            </div>
+            <div class="form-row">
+              <label for="c-email">Email address</label>
+              <input type="email" id="c-email" name="c-email" placeholder=" " required />
+            </div>
+            <div class="form-row">
+              <label for="c-phone">Phone number</label>
+              <input type="tel" id="c-phone" name="c-phone" placeholder=" " />
+              <p class="form-note">Optional.</p>
+            </div>
+            <div class="form-row">
+              <label for="c-branch">Branch</label>
+              <select id="c-branch" name="c-branch">
+                <option value="hatfield">Hatfield Branch</option>
+                <option value="sunnyside">Sunnyside Branch</option>
+                <option value="either">Either / Not Branch-Specific</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="c-type">Message type</label>
+              <select id="c-type" name="c-type" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="feedback">General feedback</option>
+                <option value="complaint">Complaint</option>
+                <option value="branch">Question about a branch</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="c-message" rows="5" placeholder=" " required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Prepare Message</button>
+          </form>
+
+          <!-- forms.js fills this with the email preview -->
+          <div id="email-preview" class="form-success" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -107,11 +155,15 @@
       <div>
         <h4>Visit Us</h4>
         <p>Hatfield Branch &amp; Sunnyside Branch, Pretoria</p>
-        <p>nfo@LSGSupermarket.co.za</a><br></p>
+        <p><a href="mailto:info@lsgsupermarket.co.za">info@lsgsupermarket.co.za</a></p>
         <p>Mon - Sat: 07:00 - 19:00 · Sun: 08:00 - 15:00</p>
       </div>
-    </div>          
-       
+    </div>
+    <div class="container footer-bottom">
+      &copy; 2026 LSG Supermarket. All rights reserved.
+    </div>
   </footer>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js_assets/forms.js"></script>
 </body>
 </html>

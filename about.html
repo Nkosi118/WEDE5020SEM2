@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | LSG Supermarket</title>
-  <meta name="description" content="Learn about LSG Supermarket's history, mission, vision and the team behind Pretoria's family-run neighbourhood grocer."/>
+  <title>About Us | LSG Supermarket Pretoria</title>
+  <meta name="description" content="Learn about LSG Supermarket, a family-run Pretoria grocer since 2015 with branches in Hatfield and Sunnyside."/>
   <link rel="stylesheet" href="css_assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  
+
+
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">LSG <span>Supermarket</span></a>
@@ -72,13 +75,13 @@
 
     <section class="section section-alt">
       <div class="container grid grid-2">
-        <div class="card">
+        <div class="card reveal">
           <div class="card-body">
             <h3>Our Mission</h3>
             <p>To provide affordable, quality groceries with friendly, convenient service every day of the week.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <div class="card-body">
             <h3>Our Vision</h3>
             <p>To become the most trusted and convenient neighbourhood supermarket in the greater Pretoria area.</p>
@@ -109,6 +112,64 @@
         </div>
       </div>
     </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Inside our stores</h2>
+          <p>Select any photo to view it larger. Use the arrow keys or the buttons to browse.</p>
+        </div>
+        <div class="gallery-grid">
+          <a href="_images/veg.avif" class="gallery-item" data-caption="Fresh produce delivered daily">
+            <img src="_images/veg.avif" alt="Fresh vegetable stand with leafy greens" width="400" height="190" loading="lazy" />
+          </a>
+          <a href="_images/baked.avif" class="gallery-item" data-caption="Bread baked fresh every morning">
+            <img src="_images/baked.avif" alt="Freshly baked bread in the LSG bakery" width="400" height="190" loading="lazy" />
+          </a>
+          <a href="_images/cirel.avif" class="gallery-item" data-caption="Pantry staples, cereals and dairy">
+            <img src="_images/cirel.avif" alt="Aisle with cereal boxes and milk cartons" width="400" height="190" loading="lazy" />
+          </a>
+          <a href="_images/trolli.avif" class="gallery-item" data-caption="Household essentials aisle">
+            <img src="_images/trolli.avif" alt="Shopping cart in the household goods aisle" width="400" height="190" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Frequently asked questions</h2>
+          <p>Quick answers about shopping with us.</p>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <h3><button type="button" class="accordion-trigger" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1">Where are your branches?</button></h3>
+            <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+              <p>Hatfield (12 Lynnwood Road) and Sunnyside (45 Church Street), both in Pretoria. See the <a href="contact.html">Contact page</a> for maps.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3><button type="button" class="accordion-trigger" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">What are your trading hours?</button></h3>
+            <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+              <p>Monday to Saturday 07:00 - 19:00, and Sunday 08:00 - 15:00 at both branches.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3><button type="button" class="accordion-trigger" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">Do you take bulk orders?</button></h3>
+            <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+              <p>Yes. Schools, churches, offices and community groups can use our <a href="enquiry.html">Enquiry page</a> for an estimated price and delivery details.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3><button type="button" class="accordion-trigger" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">Can I supply products to LSG?</button></h3>
+            <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+              <p>We welcome local suppliers. Choose "Supplier / partnership" on the Enquiry form and our purchasing team will be in touch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -127,7 +188,7 @@
       <div>
         <h4>Visit Us</h4>
         <p>Hatfield Branch &amp; Sunnyside Branch, Pretoria</p>
-        <p>nfo@LSGSupermarket.co.za</a><br></p>
+        <p><a href="mailto:info@lsgsupermarket.co.za">info@lsgsupermarket.co.za</a></p>
         <p>Mon - Sat: 07:00 - 19:00 · Sun: 08:00 - 15:00</p>
       </div>
     </div>
@@ -135,6 +196,6 @@
       &copy; 2026 LSG Supermarket. All rights reserved.
     </div>
   </footer>
-
+ <script src="js_assets/forms.js"></script>
 </body>
 </html>
